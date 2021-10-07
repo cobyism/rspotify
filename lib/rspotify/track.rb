@@ -27,7 +27,7 @@ module RSpotify
     #           track = RSpotify::Track.find('2UzMpPKPhbcC8RbsmuURAZ')
     #           track.class #=> RSpotify::Track
     #           track.name  #=> "Do I Wanna Know?"
-    #           
+    #
     #           ids = %w(2UzMpPKPhbcC8RbsmuURAZ 7Jzsc04YpkRwB1zeyM39wE)
     #           tracks = RSpotify::Base.find(ids, 'track')
     #           tracks.class       #=> Array
@@ -57,6 +57,11 @@ module RSpotify
     # Retrieves the audio features for the track
     def audio_features
       RSpotify::AudioFeatures.find(@id)
+    end
+
+    # Retrieves the audio analysis for the track
+    def audio_analysis
+      RSpotify::AudioAnalysis.find(@id)
     end
 
     def initialize(options = {})

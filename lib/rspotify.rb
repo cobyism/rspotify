@@ -4,6 +4,7 @@ require 'rspotify/version'
 module RSpotify
   autoload :Album,              'rspotify/album'
   autoload :Artist,             'rspotify/artist'
+  autoload :AudioAnalysis,      'rspotify/audio_analysis'
   autoload :AudioFeatures,      'rspotify/audio_features'
   autoload :Base,               'rspotify/base'
   autoload :Category,           'rspotify/category'
